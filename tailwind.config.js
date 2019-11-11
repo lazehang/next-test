@@ -54,7 +54,8 @@ module.exports = {
         },
         colors: {
           ...colors,
-          primary: 'rgb(0, 0, 255)'
+          // primary: 'rgb(0, 0, 255)'
+          primary: colors.indigo['600']
         }
     },
     variants: {
