@@ -22,7 +22,7 @@ const Portfolio = () => (
             {
                projects.map((item, i) => {
                    return (
-                       <div className="w-full md:w-1/3 p-2" key={i}>
+                       <div data-aos="fade-up" className="w-full md:w-1/3 p-2" key={i}>
                            <div className="rounded shadow-lg cursor-pointer">
                             <div className="img-wrapper">
                                 <img src="https://dummyimage.com/500x400/000000/ffffff" className="rounded-t w-full inline" />

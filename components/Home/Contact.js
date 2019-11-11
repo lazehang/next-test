@@ -29,7 +29,7 @@ class Contact extends React.Component {
                 <div className="container py-20">
                     <div className="AvenirNext bold uppercase w-full text-center text-4xl md:text-50">
                         CONTACT <span className="line-through">US</span> ME
-                        <div className="AvenirNext bold text-md max-w-3xl ml-auto">
+                        <div data-aos="fade-left" className="AvenirNext bold text-md max-w-3xl ml-auto">
                             <button onClick={this.openForm} className="border border-white rounded p-3 px-5 text-center">Start Now</button>
                         </div>
                     </div>

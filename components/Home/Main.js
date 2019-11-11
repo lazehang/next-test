@@ -7,7 +7,7 @@ const Main = () => (
             <br />aka Lazehang - <strong className="underline text-primary bold">Fullstack Web Developer.</strong>
             </div>
         </div>
-        <div className="w-full md:w-2/3 md:order-1">
+        <div className="w-full md:w-2/3 md:order-1" data-aos="fade-up">
             <img src="/images/undraw_version_control_9bpv.svg" className="w-full inline-block" />
         </div>
         </div>

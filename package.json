@@ -13,6 +13,7 @@
     "@typeform/embed": "^0.14.1",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
+    "aos": "^2.3.4",
     "next": "9.1.2",
     "node-sass": "^4.13.0",
     "postcss-preset-env": "^6.7.0",

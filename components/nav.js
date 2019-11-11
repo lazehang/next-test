@@ -21,7 +21,7 @@ class Nav extends React.Component {
   }
 
   handleScroll = () => {
-    const isTop = window.scrollY < document.querySelector('nav').getBoundingClientRect().bottom;
+    const isTop = window.scrollY <= document.querySelector('nav').getBoundingClientRect().top;
     this.setState({ scrolled: !isTop })
   }
 
