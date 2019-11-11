@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./mixins";
+@import "./functions";
+@import "./variables";
+@import "./container";
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('/fonts/Avenir_Next/AvenirNextLTPro-Regular.otf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'AvenirNext-bold';
+  src: url('/fonts/Avenir_Next/AvenirNextLTPro-Bold.otf');
+  font-display: swap;
+}
+
+body {
+  font-family: 'AvenirNext', sans-serif;
+} 
+.AvenirNext {
+  font-family: 'AvenirNext';
+}
+.AvenirNext.bold {
+  font-family: 'AvenirNext-bold';
+}
+
+nav {
+  a {
+    color: theme('colors.primary');
+  }
+}
+
+strong {
+  font-family: 'AvenirNext-bold';
+}

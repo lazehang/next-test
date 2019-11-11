@@ -1,56 +1,80 @@
 import React from 'react'
 import Link from 'next/link'
-
+import { throttle } from 'lodash'
 const links = [
-  { href: 'https://zeit.co/now', label: 'ZEIT' },
-  { href: 'https://github.com/zeit/next.js', label: 'GitHub' }
+  { href: 'https://github.com/lazehang', label: 'GitHub', target: '_blank' }
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`
   return link
 })
 
-const Nav = () => (
-  <nav>
-    <ul>
-      <li>
-        <Link href='/'>
-          <a>Home</a>
-        </Link>
-      </li>
-      {links.map(({ key, href, label }) => (
-        <li key={key}>
-          <a href={href}>{label}</a>
-        </li>
-      ))}
-    </ul>
+class Nav extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      scrolled: false
+    }
+    this.throttle = throttle(this.handleScroll, 100)
+  }
+  componentDidMount() {
+    window.addEventListener('scroll', this.throttle)
+  }
 
-    <style jsx>{`
-      :global(body) {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
-          Helvetica, sans-serif;
-      }
-      nav {
-        text-align: center;
-      }
-      ul {
-        display: flex;
-        justify-content: space-between;
-      }
-      nav > ul {
-        padding: 4px 16px;
-      }
-      li {
-        display: flex;
-        padding: 6px 8px;
-      }
-      a {
-        color: #067df7;
-        text-decoration: none;
-        font-size: 13px;
-      }
-    `}</style>
-  </nav>
-)
+  handleScroll = () => {
+    const isTop = window.scrollY < 150;
+    this.setState({ scrolled: !isTop })
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.throttle)
+  }
+
+  render() {
+    const { scrolled } = this.state
+    return (
+        <nav className="fixed top-0 w-full bg-white z-100">
+          <ul className="container" className={scrolled ? 'scrolled' : ''}>
+            <li>
+              <Link href='/'>
+                <img src="/images/laze.png" className="logo" alt="Laze" />
+              </Link>
+            </li>
+            {links.map(({ key, href, label, target }) => (
+              <li key={key}>
+                <a href={href} target={target}>{label}</a>
+              </li>
+            ))}
+          </ul>
+
+          <style jsx>{`
+            nav {
+              text-align: center;
+            }
+            ul {
+              display: flex;
+              justify-content: space-between;
+              padding: 24px;
+              transition: all .4s;
+            }
+            li {
+              display: flex;
+            }
+            a {
+              text-decoration: none;
+            }
+            .scrolled {
+              padding: 15px;
+            }
+            .logo {
+              width: 95px;
+            }
+            .scrolled .logo {
+              width: 80px;
+            }
+          `}</style>
+        </nav>
+      )
+  }
+}
 
 export default Nav

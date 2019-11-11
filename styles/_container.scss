@@ -1,0 +1,4 @@
+.container {
+    @include make-container($grid-gutter-width);
+    @include make-container-max-widths($container-max-widths, $grid-breakpoints);
+}
