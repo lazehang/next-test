@@ -4,9 +4,14 @@ const About = () => (
             <div className="AvenirNext bold uppercase w-full text-center text-4xl md:text-50 mb-5">
                 About
             </div>
-            <div className="AvenirNext bold text-md max-w-3xl mx-auto">
-                <p>
-                    Aute amet adipisicing ut ad ut eu consequat incididunt fugiat. Anim tempor irure amet ut commodo reprehenderit ipsum Lorem elit mollit ex. Tempor nisi fugiat ex eiusmod occaecat adipisicing dolor consectetur culpa est. Adipisicing adipisicing in excepteur magna duis labore. Sit ad aliqua labore adipisicing excepteur dolore id pariatur incididunt eu sit esse. Lorem laboris magna commodo ullamco veniam ullamco in qui Lorem in laboris et. Voluptate do labore sunt elit.
+            <div className="AvenirNext bold max-w-3xl mx-auto">
+                <p className="text-xl md:text-3xl pb-3">
+                    Hi, I’m Mangal Hang Limbu.
+                    <br/>
+                    A fullstack web developer based in Hong Kong.
+                </p>
+                <p className="md:text-md">
+                    Experienced Full Stack Developer skilled in NodeJs, PHP, Reactjs, PostgreSQL, MySQL etc. I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences aswell.
                 </p>
             </div>
         </div>
