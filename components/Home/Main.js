@@ -60,7 +60,7 @@ class Main extends React.Component {
             phrases: [
                 'Laze Hang',
                 'Mangal Hang',
-                'a Web Developer',
+                'Web Developer'
             ]
         }
     }
@@ -85,15 +85,15 @@ class Main extends React.Component {
         return (
             <div className="container home pt-20 pb-10 md:py-20">
                 <div className="flex flex-wrap home-inner relative">
-                <div className="ml-auto w-full md:w-2/3 md:absolute bottom-0 right-0 md:order-2 p-5 text-part">
-                    <div className="text-2xl sm:text-4xl lg:text-50 leading-tight max-w-xl md:max-w-2xl md:ml-auto">
-                    Hi, I am <br className="inline sm:hidden" /> <strong className="inline-block underline text-primary bold scrambleText">Mangal Hang</strong>
-                    <br /> aka Lazehang - <strong className="underline text-primary bold">Fullstack Web Developer.</strong>
+                    <div data-aos="fade-up" className="ml-auto w-full md:w-2/3 md:absolute bottom-0 right-0 md:order-2 p-5 text-part">
+                        <div className="text-2xl sm:text-4xl lg:text-50 leading-tight max-w-xl md:max-w-2xl md:ml-auto">
+                        Hi, I am <br className="inline sm:hidden" /> <strong className="inline-block underline text-primary bold scrambleText">Mangal Hang</strong>
+                        <br /> aka Lazehang - <strong className="underline text-primary bold">Fullstack Web Developer.</strong>
+                        </div>
                     </div>
-                </div>
-                <div className="w-full md:w-2/3 md:order-1" data-aos="fade-up">
-                    <img src="/images/undraw_version_control_9bpv.svg" className="w-full inline-block" />
-                </div>
+                    <div className="w-full md:w-2/3 md:order-1" data-aos="fade-up">
+                        <img src="/images/undraw_version_control_9bpv.svg" className="w-full inline-block" />
+                    </div>
                 </div>
             </div>
         )

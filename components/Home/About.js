@@ -1,13 +1,11 @@
 const About = () => (
-    <div className="bg-primary text-white">
-        <div className="container py-10 md:py-20">
-            <div className="AvenirNext bold uppercase w-full text-center text-4xl md:text-50 mb-5">
-                About
-            </div>
-            <div className="AvenirNext bold max-w-3xl mx-auto">
+    <div className="aboutus flex bg-primary text-white justify-center items-center">
+        <div className="container leading-tight">
+            <div className="AvenirNext bold mx-auto max-w-3xl">
                 <p className="text-xl md:text-3xl pb-3">
-                    Hi, I’m Mangal Hang Limbu.
-                    <br/>
+                    <span className="AvenirNext bold uppercase text-4xl md:text-50">
+                        About Me -
+                    </span> Hi, I’m Mangal Hang Limbu.
                     A fullstack web developer based in Hong Kong.
                 </p>
                 <p className="md:text-md">
