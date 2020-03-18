@@ -81,8 +81,8 @@ class Main extends React.Component {
                     <div data-aos="fade-up" className="ml-auto w-full md:w-2/3 md:absolute bottom-0 right-0 md:order-2 p-5 text-part">
                         <div className="text-xl sm:text-3xl lg:text-5xl leading-tight max-w-xl md:max-w-2xl md:ml-auto">
                         Hi, I am <br className="inline sm:hidden" /> 
-                        <strong class="typewrite inline-block underline text-primary bold" data-period="2000" data-type='[ "Mangal Hang.", "a Web Developer.", "a Web Enthusiast." ]'>
-                            <span class="wrap"></span>
+                        <strong className="typewrite inline-block underline text-primary bold" data-period="2000" data-type='[ "Mangal Hang.", "a Web Developer.", "a Web Enthusiast." ]'>
+                            <span className="wrap"></span>
                         </strong>
                         <br /> aka Lazehang - <strong className="underline text-primary bold">Fullstack Web Developer.</strong>
                         </div>
